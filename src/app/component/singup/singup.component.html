@@ -1,0 +1,74 @@
+
+<div class=" container col-6 card " [formGroup]="signUpForm" >
+    <div class="row d-flex card-body rounded-3 justify-content-center align-items-center h-100" >
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example1q"> First Name</label>
+          <input type="text" formControlName="firstName" id="form3Example1q" class="form-control" />
+        </div>
+    
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example1q"> Middle Name</label>
+          <input type="text" id="form3Example1q" formControlName="middleName"
+          class="form-control" />
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example1q"> Last Name</label>
+          <input type="text" id="form3Example1q" formControlName="lastName"
+           class="form-control" />
+        </div>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1q"> Email</label>
+            <input type="text" id="form3Example1q" formControlName="email"
+            class="form-control" />
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1q"> Password</label>
+            <input type="password" id="form3Example1q" formControlName="Password"
+            class="form-control" />
+          </div>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1q">Confirm Password</label>
+            <input type="password" id="form3Example1q" formControlName="confirmPassword"
+            class="form-control" />
+          </div>
+        
+          <div>
+            <label for="" class="form-label " >Contact No</label>
+            <input type="number" style="margin-bottom: 10px;" formControlName="ContactNo"
+             class="form-control">
+          </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+    
+            <div class="form-outline datepicker">
+              <label for="exampleDatepicker1"  class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" formControlName="dateofBirth"
+              id="exampleDatepicker1" />
+            </div>
+    
+          </div>
+          <div class="col-md-6 mb-4">
+            <label class="form-label">Gender</label>&nbsp;<br>
+            <select class="select form-control" formControlName="Gender" >
+              <option value="" ></option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+    
+          </div>
+        </div>
+    
+        
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success btn-lg mb-1"
+                    style="margin-left: 298px;"
+                    (click)="signIn()">Submit</button>
+      </div>
+</div>
+
+
+
+  

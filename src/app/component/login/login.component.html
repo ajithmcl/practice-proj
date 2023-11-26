@@ -1,0 +1,26 @@
+<div class="container">
+    <div *ngIf="errorMessage">
+        {{errorMessage}}
+    </div>
+    <div class="col mt-5 " style="width: 50%;">
+        <div [formGroup]="LoginForm">
+            <div class="mt-5">
+                <label for="" class="form-label">UserName</label>
+            <input type="text" formControlName="UserName" class="form-control">
+            </div>
+            <div class="mt-2 mb-2">
+                <label for="" class="form-label ">Password</label>
+            <input type="text" formControlName="Password" class="form-control">
+            </div>
+            <div class="mt-2 mb-2">
+                <label for="" class="form-label ">Upload file</label>
+            <input type="file" (change)="testData($event)" class="form-control">
+            <!-- <button class="btn btn-primary" (click)="testData()">Upload</button> -->
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" (click)="Login()">{{isLoginmode?"Login":"SignUp"}}</button>|
+                <button class="btn btn-primary" (click)="isSignup()">Swith to {{isLoginmode?"SignUp":"Login"}}</button>
+            </div>
+        </div>
+    </div>
+</div>

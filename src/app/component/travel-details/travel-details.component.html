@@ -1,0 +1,167 @@
+
+
+<!-- <div class="mt-3 mb-3 items">
+  <span class="d-flex"></span>
+    <div class="inline"  >
+      <label for="" class="form-label">First Name</label>
+      <input  type="text" class="form-control">
+
+    </div>
+    <div class="inline1 ">
+      <label for=""  class="form-label">MiddleName</label>
+
+      <input style="margin-top: 2px;" type="text" class="form-control">
+
+    </div>
+    <div class="inline">
+      <label for="" class="form-label">LastName</label>
+
+      <input style="margin-top: 2px" type="text" class="form-control">
+
+    </div>
+  
+    
+    
+ 
+</div> -->
+
+<!-- <div class=" container-fliud-xs-sm-md-xl mb-3 mt-5">
+  
+    <div class="col-6-xs-sm-md-lg-xl items">
+      <div>
+        <label for="" class="form-label"> FirstName</label>
+      <input type="text" class="form-control">
+      </div>
+    <div>
+      <label for="" class="form-label">MiddleName</label>
+      <input type="text" class="form-control">
+    </div>
+    <div>
+      <label for="" class="form-label">Lastname</label>
+      <input type="text" class="form-control">
+    </div>
+    <div>
+      <label for="" class="form-label">Lastname</label>
+      <input type="text" class="form-control">
+    </div>
+    </div>
+  
+  
+  </div> -->
+<!-- div>ul>li*4>a{link $} -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <input type="text" class="form-control" placeholder="Input 1">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <input type="text" class="form-control" placeholder="Input 2">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <input type="text" class="form-control" placeholder="Input 3">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <input type="text" class="form-control" placeholder="Input 4">
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<div class="row justify-content-center">
+    
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <button type="button" class="btn btn-primary mt-5 "
+ data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Make Plan Details Bootstrap
+  </button>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <button class="btn btn-primary mt-5" type="button"
+  (click)="openDialog()"> Make Plan Details Dialog-Box</button>
+    </div>
+      
+
+      
+ 
+  
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static"
+   aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" [formGroup]="TravelDetailsForm">
+          <div class="col">
+            <div class="d-flex justify-conent-center">
+                <div >
+                <label for="" class="form-label mb-2">FirstName</label>
+                <input type="text" formControlName="FirstName" class="form-control mt-2 mb-5">
+                </div>
+                <div >
+                    <label for="" class="form-label mb-2">LastName</label>
+                    <input type="text" formControlName="LastName" class="form-control mt-2 mb-5">
+                    </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-conent-center">
+                <div >
+                <label for="" class="form-label mb-2">Boarding</label>
+                <!-- <input type="text" formControlName="BoardingPoint" class="form-control mt-2 mb-5"> -->
+                <select name="" formControlName="BoardingPoint" class="form-select mt-2 mb-5" id="">
+                  <option value="" *ngFor="let list of countryList">{{countryList}}</option>
+                  
+                </select>
+                </div>
+                <div >
+                    <label for="" class="form-label mb-2">Destination</label>
+                    <input type="text" formControlName="Destination" class="form-control mt-2 mb-5">
+                    </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-conent-center">
+                <div >
+                <label for="" class="form-label mb-2">NoOfDays</label>
+                <input type="number" formControlName="days" class="form-control mt-2 mb-5">
+                </div>
+                <div >
+                    <label for="" class="form-label mb-2">TravelDate</label>
+                    <input type="date" formControlName="TravelDate" class="form-control mt-2 mb-5">
+                    </div>
+                    <div class="form-label mb-2">
+                      <label for="">Did you travel abroad before</label>
+                      <input type="checkbox" (change)="checked()" formControlName="gender">
+                    </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-conent-center">
+                <div >
+                <label for="" class="form-label mb-2">MemberCount</label>
+                <input type="number" formControlName="PersonsCount" class="form-control mt-2 mb-5">
+                </div>
+                <div >
+                    <label for="" class="form-label mb-2">HotelPreference</label>
+                    <input type="text" formControlName="HotelPreference" class="form-control mt-2 mb-5">
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"  data-bs-dismiss="modal"
+           (click)="Savedata()" >Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn-primary d-flex justify-content-center align-items-center"  (click)="next()">Seat selection</button>
+  </div>

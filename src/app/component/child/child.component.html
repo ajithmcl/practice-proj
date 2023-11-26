@@ -1,0 +1,119 @@
+<p>child works!</p>
+<p>{{todayMsg}}</p>
+<!-- {{userName}} -->
+<!-- <div *ngIf="details">
+    {{customerData}}
+</div> -->
+<div class="card" *ngIf="xyz">
+    <div style="padding: 2px; margin: 2px;">
+        <p>{{xyz.name}}</p>
+    <p>{{xyz.address}}</p>
+    <p>{{xyz.city}}</p>
+    <p>{{xyz.state}}</p>
+    <p>{{xyz.country}}</p>
+    
+    </div>
+    <!-- <p>{{xyz.name}}</p> -->
+    <!-- <p>{{xyz.name}}</p> -->
+</div>
+<div class="Form" [formGroup]="memberdetailsform">
+    <p>Customer No : {{customer.customerNo}}</p>
+    <p>Name        : <input class="form-control " formControlName="name"></p>
+    <p>Address     : <input class="form-control " formControlName="address"></p>
+    <p>city     : <input class="form-control " formControlName="city" ></p>
+    <p>state     : <input class="form-control " formControlName="state"></p>
+    <p>country     : <input class="form-control " formControlName="country"></p>
+    <p>IPL Team:  <input type="text" [formControl]="customerNo" class="form-control"></p>
+</div>
+<!-- <p>Customer No : {{customer.customerNo}}</p>
+<p>Name        : <input [(ngModel)]="customer.name"></p>
+<p>Address     : <input [(ngModel)]="customer.address"></p>
+<p>city     : <input [(ngModel)]="customer.city"></p>
+<p>state     : <input [(ngModel)]="customer.state"></p>
+<p>country     : <input [(ngModel)]="customer.country"></p> -->
+ 
+<button (click)="update()">Update</button>
+<button (click)="practiceSend()">send</button>
+<button [class]="Styles.class"  (click)="send()">send</button>
+<!-- <div class="container">
+    <div class="h3">Details</div>
+    <div>{{customer}}</div>
+    <button (click)="first()" >click</button>
+</div> -->
+
+ <!-- <h4>{{details}}</h4>
+ 
+ <button class="btn btn-primary" (click)="send()">send KYC status</button> -->
+
+ <!-- <button (click)="send()"> message to parent</button> -->
+
+ <!-- <div [formGroup]="memberdetailsform">
+    <div formArrayName="member">
+        <h3>mobile no</h3>
+        <div><button type="button" (click)="addmember()">add</button></div>
+        <div class="form-group" *ngFor="let daughter of newperson.controls;let i=index ">
+            <label>mobiles{{i+1}}</label>
+            <input type="text" class="form-control" [formControlName]="i">
+        </div>
+     </div>
+ </div> -->
+ <!-- <div>
+    <select class="dropdown" (change)="selected($event)">
+        <option>self</option>
+        <option>spouse</option>
+     </select>
+     <p>you selected {{selectedoption}}</p>
+    
+     <div *ngIf="selectedoption=='self'" [formGroup]="memberdetailsform">
+        <input type="text" formControlName="name" placeholder="firstname">
+        <input type="text" formControlName="name" placeholder="lastname">
+     </div>
+     <div *ngIf="selectedoption=='spouse'" [formGroup]="memberdetailsform">
+        <input type="text" formControlName="name" placeholder="middlename">
+        <input type="text" formControlName="name" placeholder="name">
+     </div>
+ </div> -->
+ <!-- <div class="row">
+    <div class="col-sm-2 table-responsive" formArrayName="itemrows">
+        <table class="table">
+            <thead>
+                <th style="white-space:nowrap;float:center"><span class="required-filed">Name</span></th>
+                <th style="white-space:nowrap;float:center"><span class="required-filed">city</span></th>
+                <th style="white-space:nowrap;float:center"><span class="required-filed">state</span></th>
+                <th style="white-space:nowrap;float:center"><span class="required-filed">pincode</span></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of formarry.controls;let i=index" [formGroupName]="i">
+                    <td style="white-space: nowrap;">
+                        <label for="">Name</label>
+                        <input id="name{{i}}" formControlName="name" type="text">
+                    </td>
+                    <td style="white-space: nowrap;">
+                        <label for="">city</label>
+                        <input id="name{{i}}" formControlName="city" type="text">
+                    </td>
+                    <td style="white-space: nowrap;">
+                        <label for="">state</label>
+                        <input id="name{{i}}" formControlName="state" type="text">
+                    </td>
+                    <td style="white-space: nowrap;">
+                        <label for="">pincode</label>
+                        <input id="name{{i}}" formControlName="pincode" type="text">
+                    </td>
+                    <button *ngIf="formarry.controls.length > 1" (click)="deleterow(i)">
+                        Remove
+                    </button>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <button type="button" (click)="addnewrow()">
+                            Add
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+ </div> -->

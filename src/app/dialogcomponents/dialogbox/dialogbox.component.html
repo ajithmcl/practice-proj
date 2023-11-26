@@ -1,0 +1,122 @@
+<h2 mat-dialog-title> Session Timeout</h2>
+<p>You will be logged out due to inactivity</p>
+
+<!-- <div *ngIf="vaccine==false">
+    <h1>vaccinated</h1>
+</div> -->
+
+<!-- <div [formGroup]="details">
+
+    <div formArrayName="member" *ngFor="let members of formdetails.controls;let i=index">
+    <div [formGroupName]="i">
+    <input formControlName="check" type="checkbox"><span i="index">{{list[i]}}</span>
+    <select formControlName="value" class="form-control" name="" id="">
+        <option >10000</option>
+        <option >20000</option>
+    </select>
+</div>
+</div>
+</div> -->
+
+<div class="col">
+
+    <div class="card text-white bg-success " *ngIf="previousdata" style="margin-left: 10px;">
+        <div class="p-3 card-body ">
+
+            <div [formGroup]="details">
+                <div formArrayName="member">
+                    <div *ngFor="let array of formdetails.controls ;let i=index">
+                        <div [formGroupName]="i">
+                            <div   >
+                            
+                                <div  >
+                                    <div  class="mt-3 mb-3">
+                                       <span> <input type="checkbox" (change)="checked(i)"
+                                        formControlName="check">
+                                        {{list[i]}}</span>
+                                    </div>
+                                    <div *ngIf="showFields && array.get('check')?.value">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">Name</label>
+                                                <input type="text" class="form-control" formControlName="name">
+                            
+                                                <!-- {{previousdata.FirstName}}{{previousdata.LastName}} -->
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">BoardingPoint</label>
+                                                <input type="text" class="form-control" formControlName="destination">
+                                                <!-- {{previousdata.BoardingPoint}} -->
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">Destination</label>
+                                                <!-- {{TravelData[3]}} -->
+                                                <input type="text" class="form-control" formControlName="Boarding">
+                            
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">No Of Days</label>
+                                                <input type="text" class="form-control" formControlName="noofDays">
+                            
+                                                <!-- {{previousdata.days}} -->
+                                            </li>
+                                            <!-- {{previousdata.TravelDate}} -->
+                                            <!-- {{previousdata.PersonsCount}} -->
+                                            <!-- {{previousdata.HotelPreference}} -->
+                                            <!-- <li class="list-group-item">
+                                                <label for="" class="form-label">Travel Date</label>
+                                                <input type="text" class="form-control">
+                            
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">NoOfPeople</label>
+                                                <input type="text" class="form-control">
+                            
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label for="" class="form-label">Hotel Preference</label>
+                                                <input type="text" class="form-control">
+                            
+                                            </li> -->
+                            
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <!-- <label for="" class="form-label"></label> -->
+    <!-- <div class="p-3" *ngIf="previousdata">
+        <p><label for="">Its Empty</label></p>
+    </div> -->
+</div>
+
+
+<div class="mt-3">
+    <button type="button" mat-button>
+        keep me logged in
+    </button>
+    <button type="button" mat-button mat-dialog-close mat-dialog-close="false" (click)="close()">
+        LogOut
+    </button>
+</div>

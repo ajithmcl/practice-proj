@@ -1,0 +1,99 @@
+<!-- <h1>{{message}}</h1> -->
+<!-- <h4>{{kycmessage}}</h4>
+
+<div [formGroup]="registrationform">
+    <input formControlName="name">
+    <input formControlName="city">
+    
+        <h3>mobile no</h3>
+        <button type="button" (click)="addcontrol()">add</button>
+        <div formArrayName="contact" class="form-group" *ngFor="let daughter of contact.controls;let i=index ">
+            <label>mobiles{{i+1}}</label>
+            <input type="text" class="form-control" [formControlName]="i">
+        </div>
+    </div>
+
+
+  -->
+<!-- 
+<div class="m-3 mt-2">
+<i class="fa-sharp fa-light fa-house m-1 mt-2 mb-2"></i>
+<br>
+<i class="fa-sharp fa-light fa-comment m-1 mt-2 mb-1"></i>
+
+</div>
+<section [formGroup]="registrationform" class="example-section">
+    <mat-checkbox class="example-margin" formControlName="vaccinated">vaccinateed</mat-checkbox><br>
+    <mat-checkbox class="example-margin" formControlName="dose1" >1st dose</mat-checkbox>
+    <mat-checkbox class="example-margin" formControlName="dose2" >2nd dose</mat-checkbox>
+
+  </section>
+
+<div [formGroup]="memberlist">
+    <mat-checkbox class="example-margin" formControlName="self" value="self">self</mat-checkbox>
+    <mat-checkbox class="example-margin" formControlName="spouse" value="spouse" >spouse</mat-checkbox>
+    <mat-checkbox class="example-margin" formControlName="kid1" value="son">son</mat-checkbox>
+    <mat-checkbox class="example-margin" formControlName="kid2" value="daughter" >daughter</mat-checkbox>
+
+</div>
+<button class="btn btn-primary" (click)="selectedlist()">send</button>
+<button (click)="opendialog()" class="btn btn-danger">Open Dialog</button>
+
+<h4>Kyc Status is {{childdata}}</h4>
+
+-->
+
+<div class="container">
+  <h5>parent Component</h5>
+  <!-- <h6>{{childDetails}}</h6> -->
+   
+  <table class="mt-5">
+    <thead>
+    <tr >
+        <th>No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers ;let i=index">
+        <td>{{customer.customerNo}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.city}}</td>
+        <td>{{customer.state}}</td>
+        <td>{{customer.country}}</td>
+        <td><button (click)="showDetails(customer)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <app-child >
+  </app-child> -->
+  {{UserName}}
+  {{motivationalMsg}}
+
+  <input type="number" [(ngModel)]="xyz"  class="form-control">
+  <button class="btn btn-primary" (click)="sendData()">click</button>
+  <div *ngFor="let x of data" >
+    <p style="background-color: yellow;" (click)="countData(x)"
+    >{{count[x]||0}}</p>
+  </div>
+  <hr>
+
+  Child component
+  <app-child 
+  [customer]="selectedCustomer" 
+  (customerChange)="update($event)"
+  (message)="testData($event)"
+  (practiceText)="recieveMotivationmsg($event)"
+  [details]="selectedCustomer"
+  [xyz]="customerDetails" 
+  [Styles]="properties"
+  [todayMsg]="todayQoute">
+
+  </app-child>
+</div>

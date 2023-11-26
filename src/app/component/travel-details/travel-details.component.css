@@ -1,0 +1,21 @@
+/* .inline{
+    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.inline1{
+    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    justify-content: space-between;
+} */
+
+.items{
+    flex: 2;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}

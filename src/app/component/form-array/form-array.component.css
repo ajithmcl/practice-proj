@@ -1,0 +1,16 @@
+.items{
+    display: flex;
+    flex: auto;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+

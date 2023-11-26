@@ -1,0 +1,6 @@
+<div style="width: 50%; margin-top: 10px;margin-left: 10px;">
+    <select (selectionchange)="changed($event)" class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+       <option *ngFor="let list of persons" value="i+1">{{list}}</option>
+      </select>
+</div>

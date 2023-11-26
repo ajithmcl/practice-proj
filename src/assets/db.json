@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "firstname": "joe",
+      "lastname": "george",
+      "companyname": "rsgg",
+      "location": null,
+      "id": 1
+    },
+    {
+      "firstname": "raju",
+      "lastname": "sgh",
+      "companyname": "sfghh",
+      "location": null,
+      "id": 2
+    },
+    {
+      "firstname": "baba",
+      "lastname": "sheik",
+      "companyname": "jammu",
+      "location": null,
+      "id": 3
+    },
+    {
+      "firstname": "baba",
+      "lastname": "sheik",
+      "companyname": "danger",
+      "location": null,
+      "id": 4
+    }
+  ]
+}

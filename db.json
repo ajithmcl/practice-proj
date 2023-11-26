@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Users": [
+    {"firstName": "babu",
+    "lastName": "macherla",
+    "middleName": "rao",
+    "DateOfBirth": null,
+    "Gender": "Male",
+    "dateofBirth": "1996-10-02",
+    "email": "babu@hotmail.com",
+    "Password": "thisispractice",
+    "confirmPassword": "thisispractice",
+    "ContactNo": 9876584569
+  }
+  ]
+  
+   
+}
